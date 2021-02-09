@@ -11,6 +11,7 @@ import { CartService } from '../cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product;
+  // tslint:disable-next-line: typedef
   addToCart(product) {
     this.cartService.addToCart(product);
     window.alert('You product has been added to the cart!');
@@ -21,6 +22,7 @@ export class ProductDetailsComponent implements OnInit {
     private cartService: CartService
   ) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
